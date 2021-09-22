@@ -1,0 +1,20 @@
+session(req.session) --> funciona como una clave de auth del usuario --> no son escalables y globales al servidor
+
+token --> clave de auth --> transporta información
+
+uuid del user = 3213w51das6d51w3as2d1w6q5d1dsa
+JWT = {
+    id: 10,
+    expiresIn: 30min,
+    data: {
+        username: 'tiko',
+        pass: 1234
+    }
+}
+
+Diferencia entre el session y el jwt es que el jwt es una clave de autentificacion que transporta información.
+
+
+TAREA:
+Hacer un login conectado a una base de datos haciendo el query por knex 
+y pasar el id del usuario loggeado por el payload y si los datos son incorrectos pasar un 401
